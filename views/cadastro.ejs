@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFStore - Cadastro</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            border:solid 1px black;
+            width: 800px;
+            margin: auto;
+        }
+        div, p{
+            margin: 10px;
+        }
+        input[type="checkbox"]{
+            padding: 10px;
+            width: auto;
+        }
+        input{
+            padding: 10px;
+            width: 755px;
+        }
+        h1{
+            text-align: center;
+        }
+        button{
+            background-color: green;
+            color: aliceblue;
+            padding: 10px 20px;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastro</h1>
+    <form method="post" enctype="multipart/form-data">
+        <div>
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome">
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div>
+            <label for="cpf">CPF</label>
+            <input type="text" name="cpf" id="cpf">
+        </div>
+        <div>
+            <label for="telefone">Telefone</label>
+            <input type="text" name="telefone" id="telefone">
+        </div>
+        <div>
+            <label for="endereco">Endereço</label>
+            <input type="text" name="endereco" id="endereco">
+        </div>
+        <div>
+            <label for="foto">Foto</label>
+            <input type="file" name="foto" id="foto">
+        </div>
+        <div>
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" id="senha">
+        </div>
+        <div>
+            <input type="checkbox" name="admin" id="admin">
+            <label for="admin">Admin?</label>
+        </div>
+        <div>
+            <button type="submit">Cadastrar</button>
+        </div>
+        <p>
+            Você já é cadastrado? <a href="/login">Clique aqui!</a>
+        </p>
+    </form>
+</body>
+</html>

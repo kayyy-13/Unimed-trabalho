@@ -1,0 +1,38 @@
+<%-include('../cabecalho.ejs')%>
+<section class="col-12 col-md-10">
+    <div class="card my-4">
+        <h5 class="card-header">Lista de Usuários</h5>
+        <div class="card-body">
+            <table class="table table-striped table-hover table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Foto</th>
+                        <th scope="col">Detalhe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%usuarios.forEach(function(usuario){%>
+
+                    <tr>
+                        <th scope="row"> <%=usuario._id%> </th>
+                        <td> <%=usuario.nome%> </td>
+                        <td> <%=usuario.email%> </td>
+                        <td> 
+                            <img src="/usuarios/<%=usuario.foto%>" max-height="40px" alt="Foto do Usuário">
+                        </td>
+                        <td>-
+                            <a href="/admin/usuarios/detalhe/<%=usuario._id%>">Detalhe</a>
+                        </td>
+                    </tr>
+
+                    <%})%>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<%-include('../rodape.ejs')%>

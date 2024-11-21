@@ -1,0 +1,45 @@
+<%-include('../cabecalho.ejs')%>
+<section class="col-12 col-md-10">
+    <div class="card my-4">
+        <h5 class="card-header">Lista de Categorias</h5>
+        <div class="card-body">
+
+            <form method="post" class="form-inline">
+                <div class="form-group mb-2">
+                    <label for="pesquisar" class="sr-only">Pesquisar</label>
+                    <input type="text" class="form-control" id="pesquisar" placeholder="Pesquisar" name="pesquisar">
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">Pesquisar</button>
+            </form>
+
+            <table class="table table-striped table-hover table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Editar</th>
+                        <th scope="col">Deletar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%Categorias.forEach(function(categoria){%>
+
+                    <tr>
+                        <th scope="row"> <%=categoria._id%> </th>
+                        <td> <%=categoria.nome%> </td>
+                        <td>
+                            <a href="/admin/categoria/edt/<%=categoria._id%>">Editar</a>
+                        </td>
+                        <td>
+                            <a href="/admin/categoria/del/<%=categoria._id%>">Deletar</a>
+                        </td>
+                    </tr>
+
+                    <%})%>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<%-include('../rodape.ejs')%>

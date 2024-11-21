@@ -1,0 +1,22 @@
+<%-include('../cabecalho.ejs')%>
+<section class="col-12 col-md-10">
+    <div class="card my-4">
+        <h5 class="card-header">Lista de Usuários</h5>
+        <div class="card-body">
+            <div class="card" style="width: 80%; margin: auto; text-align: center;">
+                <img class="card-img-top" src="/usuarios/<%=usuario.foto%>" 
+                    alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title"><%=usuario.nome%></h5>
+                    <p class="card-text">Email: <%=usuario.email%></p>
+                    <p class="card-text">Endereço: <%=usuario.endereco%></p>
+                    <p class="card-text">Telefone: <%=usuario.telefone%></p>
+                    <p class="card-text">CPF: <%=usuario.cpf%></p>
+                    <p class="card-text">Admin: <%=usuario.admin%></p>
+                    <a href="/admin/usuarios/lst" class="btn btn-primary">Voltar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<%-include('../rodape.ejs')%>
