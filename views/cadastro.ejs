@@ -3,54 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IFStore - Cadastro</title>
+    <title>Unimed - Cadastro</title>
     <style>
-        body{
-            background-color: cornflowerblue;
-            border:solid 1px black;
-            width: 800px;
-            margin: auto;
+        /* Fundo externo */
+        body {
+            background-color: #249637; /* Fundo claro */
+            font-family: 'Roboto', sans-serif; /* Fonte Google Fonts */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Ocupa toda a tela */
         }
-        div, p{
-            margin: 10px;
+
+        /* Container do formulário */
+        form {
+            background-color: #ffffff; /* Fundo branco para o formulário */
+            border: solid 1px #ddd; /* Borda leve */
+            border-radius: 20px; /* Borda arredondada */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            padding: 20px 30px;
+            width: 100%;
+            max-width: 500px; /* Largura máxima */
         }
-        input[type="checkbox"]{
-            padding: 10px;
-            width: auto;
-        }
-        input{
-            padding: 10px;
-            width: 755px;
-        }
-        h1{
+
+        /* Título */
+        h1 {
             text-align: center;
+            color:#249637; /* Cor do título */
         }
-        button{
-            background-color: green;
-            color: aliceblue;
-            padding: 10px 20px;
-            font-size: large;
+
+        /* Estilo geral para os campos */
+        div {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box; /* Garante que padding não aumente a largura */
+        }
+
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        /* Botão */
+        button {
+            background-color: #30bd30; /* Verde Unimed */
+            color: #ffffff;
+            padding: 10px 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #279427; /* Cor mais escura ao passar o mouse */
+        }
+
+        /* Texto do rodapé */
+        p {
+            text-align: center;
+            color: #555;
+        }
+
+        p a {
+            color: #8b1b1b;
+            text-decoration: none;
+        }
+
+        p a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <h1>Cadastro</h1>
     <form method="post" enctype="multipart/form-data">
+        <h1>Cadastro Unimed</h1>
         <div>
             <label for="nome">Nome</label>
-            <input type="text" name="nome" id="nome">
+            <input type="text" name="nome" id="nome" required>
         </div>
         <div>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" required>
         </div>
         <div>
             <label for="cpf">CPF</label>
-            <input type="text" name="cpf" id="cpf">
+            <input type="text" name="cpf" id="cpf" required>
         </div>
         <div>
             <label for="telefone">Telefone</label>
-            <input type="text" name="telefone" id="telefone">
+            <input type="text" name="telefone" id="telefone" required>
         </div>
         <div>
             <label for="endereco">Endereço</label>
@@ -62,7 +125,7 @@
         </div>
         <div>
             <label for="senha">Senha</label>
-            <input type="password" name="senha" id="senha">
+            <input type="password" name="senha" id="senha" required>
         </div>
         <div>
             <input type="checkbox" name="admin" id="admin">
